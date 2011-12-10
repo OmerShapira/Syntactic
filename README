@@ -24,11 +24,28 @@ and
 
 appear in the text, then the words "cat" and "dog" are likely to appear in the same category.
 
+Usage:
+**********************
+When jar'd to Syntactic.jar, then:
+java -jar Syntactic.jar [name] [input folder] [output folder] [clusters] [threshold] [epsilon]
+
+[name] 		is the corpus name. Only alphanumeric characters and underscores(_).
+[input folder]	is the folder where the corpus is. By default, only .txt files are read.
+[output folder] is a folder in which Syntactic will create the output root folder, with a timestamp. If it is set to "Output/", then Syntactic will place everything in "Output/CorpusName dd.MM.yy HH.mm.ss /"
+[clusters] 	the amount of resulting groups. Good results appear above 75. Speed decreases polynomially with the number of clusters. Default is 50.
+[threshold]	the minimum frequency a word has to have in order to be clustered. Default is 50.
+[epsilon]	clusters who are not mutually separated by this distance are merged. Values vary significantly. Typical values are between 0.5 and 0.05.
+
+
 Versatility
 **********************
 * The program has a replacable class for parsing texts, so it can be modified to remove XML tags (or just read them), or any other modification in regular expressions.
 
 * The program outputs JSON in a very chatty form (lots of info), which can be reduced quickly.
+
+Credit
+**********************
+Syntactic was written by Omer Shapira, based on an algorithm described by Alexander Clark.
 
 
 Structure
