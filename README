@@ -1,0 +1,62 @@
+**********************
+					 
+ Syntactic, Build 53 
+					  
+	by Omer Shapira
+					  
+**********************
+
+Syntactic is a program that reads huge texts and divides common words in the text to categories. Here are some of its automatic categorizations in the Simple English Wikipedia:
+
+	Cluster 17
+	----------
+	with, including, without, involving, containing, featuring, requiring, reaching, covering
+
+	Cluster 52
+	----------
+	city, town, district, province, university, river, county, site, community, village, moon, field, state, series
+
+It does this by examining contexts in 3-grams. For example, if the sentences
+
+"the cat sat on the mat"
+and
+"the dog sat on the porch"
+
+appear in the text, then the words "cat" and "dog" are likely to appear in the same category.
+
+Versatility
+**********************
+* The program has a replacable class for parsing texts, so it can be modified to remove XML tags (or just read them), or any other modification in regular expressions.
+
+* The program outputs JSON in a very chatty form (lots of info), which can be reduced quickly.
+
+
+Structure
+**********************
+Syntactic
+\_syntaxLearner.java
+  |
+  |__LearnerMain.java
+  |__Learner.java
+  |__Recorder.java
+  |__Cluster.java
+  |__ClusterContext.java
+  |
+  \_Corpus
+  . |
+  . |__Context.java
+  . |__VocabularyContext.java
+  . |__Word.java
+  . |__Corpus.java
+  . |__Vocabulary.java
+  . \_source
+  . .|
+  . .|__CorpusSource.java
+  . .|__PlainTextFile.java
+  . .|__WikiDump.java
+  \_UI
+  .|
+  .|__Console.java
+  .|__Report.java
+  ..
+	

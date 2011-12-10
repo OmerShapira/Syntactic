@@ -13,7 +13,7 @@ import syntaxLearner.corpus.Vocabulary;
 import syntaxLearner.corpus.Word;
 /**
  * A library that records the algorithm in JSON for a standard interpreter
- * @author User 1
+ * @author Omer Shapira
  *
  */
 public class Recorder {
@@ -80,7 +80,7 @@ public class Recorder {
 		s.append("\ttypeToId: \n\t{\n\t");
 		for (Map.Entry<String, Integer> e: entrySet){
 			if (v.getWord(e.getValue()).frequency >= l.RARE_WORD_THRESHOLD){ //TODO see if necessary
-				s.append(String.format("\t\t%1$s: %2$s,\n", e.getKey(), e.getValue()));
+				s.append(String.format("\t\t\"%1$s\": %2$s,\n", e.getKey(), e.getValue()));
 			}
 		}
 		s.append("},\n");
