@@ -89,9 +89,9 @@ Tasks
 
 Features and Performance:
 -------------
-* Add multithreading. Relevant scope: Learner.java
+* Add multithreading to the main clustering procedure. Relevant scope: Learner.java
 * Improve the parser and source ingest. Relevant scope: the Courpus and Corpus.source packages.
-* Serialize the data structures so that the program will be interruptible. NOTE: Some gentrification needs to be done beforehand, please let me know before doing so.
+* Serialize the data structures so that the program will be interruptible. NOTE: Some of the code needs to be made more generic beforehand, please let me know before beginning.
 * Add rulesets for parsers. Rulesets should be written in regexes, with a rule for SPLIT, and a 2-place rule for REPLACE.
 * Add output processors. Currently the output is JSON and save for its copious space requirements, it works well I suggest processing the output with scripts instead of with the main code.
 
