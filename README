@@ -7,9 +7,9 @@
 			  
 ********************************************
 
+VISUALIZATION: http://syntactic.omershapira.com
 
-NOTE: This project is accepting contributors. Read the 'tasks' list and join in. If there are any questions, feel free to contact me at info|at|omershapira|dot|com.
-
+ACCEPTING CONTRIBUTORS! Read the 'tasks' list and join in. If there are any questions, feel free to contact me at info|at|omershapira|dot|com.
 
 Description
 **********************
@@ -93,7 +93,7 @@ Features and Performance:
 * Improve the parser and source ingest. Relevant scope: the Courpus and Corpus.source packages.
 * Serialize the data structures so that the program will be interruptible. NOTE: Some of the code needs to be made more generic beforehand, please let me know before beginning.
 * Add rulesets for parsers. Rulesets should be written in regexes, with a rule for SPLIT, and a 2-place rule for REPLACE.
-* Add output processors. Currently the output is JSON and save for its copious space requirements, it works well I suggest processing the output with scripts instead of with the main code.
+* Add output processors. Currently the output is JSON and save for its copious space requirements, it works well. That's why I suggest processing the output with scripts instead of with the main code.
 
 Algorithms:
 -------------
