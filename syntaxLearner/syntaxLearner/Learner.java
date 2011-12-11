@@ -114,7 +114,8 @@ public class Learner {
 	 * (defined above), then update parenthood, add everything to c1,
 	 * and reset c2.
 	 */
-	private boolean unifyCloseClusters() {		
+	private boolean unifyCloseClusters() {
+		boolean unionOccured = false;
 		for (Cluster c1 : clusters.values()){
 			for (Cluster c2 : clusters.values()){
 				double dist;
@@ -144,16 +145,23 @@ public class Learner {
 						c2.add(next);
 						c2.setNew(true);
 						groundCluster.remove(next);
+						unionOccured=true;
 						String message = String.format("Cluster #%1$2s merged into #%2$2s at distance [%3$-8g]. " +
 								"Cluster #%1$2s recreated with stem: \"%4$1s\"", c2.ID, c1.ID, dist, 
 								w.name);
 						Console.line(message);
-						updatedClusters.clear();
+						//updatedClusters.clear(); TODO See if necessary, right now only removing c2
+						
+						updatedClusters.remove(c2);
 						//corpus.getVocabulary().purgeUpdatedWords();
 
 					}
 				}
 			}
+			//OPTIMIZATION if something was pushed into c1, recalculate now. TODO check if this works
+			if (unionOccured) {
+				updatedClusters.clear();
+				}
 		}
 		for (Cluster c : clusters.values()){
 			c.setNew(false);
