@@ -150,9 +150,7 @@ public class Learner {
 								"Cluster #%1$2s recreated with stem: \"%4$1s\"", c2.ID, c1.ID, dist, 
 								w.name);
 						Console.line(message);
-						//updatedClusters.clear(); TODO See if necessary, right now only removing c2
-						
-						updatedClusters.remove(c2);
+						//updatedClusters.clear(); TODO See if necessary. Now only doing this at the end.
 						//corpus.getVocabulary().purgeUpdatedWords();
 
 					}
@@ -161,6 +159,7 @@ public class Learner {
 			//OPTIMIZATION if something was pushed into c1, recalculate now. TODO check if this works
 			if (unionOccured) {
 				updatedClusters.clear();
+				unionOccured = false;
 				}
 		}
 		for (Cluster c : clusters.values()){

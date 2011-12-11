@@ -1,11 +1,18 @@
-**********************
+********************************************
 					 
  Syntactic, Build 53 
 					  
 	by Omer Shapira
-					  
-**********************
+	http://omershapira.com		
+			  
+********************************************
 
+
+NOTE: This project is accepting contributors. Read the 'tasks' list and join in. If there are any questions, feel free to contact me at info|at|omershapira|dot|com.
+
+
+Description
+**********************
 Syntactic is a program that reads huge texts and divides common words in the text to categories. Here are some of its automatic categorizations in the Simple English Wikipedia:
 
 	Cluster 17
@@ -76,4 +83,24 @@ Syntactic
   .|__Console.java
   .|__Report.java
   ..
-	
+
+Tasks
+**********************
+
+Features and Performance:
+-------------
+* Add multithreading. Relevant scope: Learner.java
+* Improve the parser and source ingest. Relevant scope: the Courpus and Corpus.source packages.
+* Serialize the data structures so that the program will be interruptible. NOTE: Some gentrification needs to be done beforehand, please let me know before doing so.
+* Add rulesets for parsers. Rulesets should be written in regexes, with a rule for SPLIT, and a 2-place rule for REPLACE.
+* Add output processors. Currently the output is JSON and save for its copious space requirements, it works well I suggest processing the output with scripts instead of with the main code.
+
+Algorithms:
+-------------
+I'm currently relying on Clark's description of the learner. Here are his notes:
+	http://www.cs.rhul.ac.uk/home/alexc/papers/09194cla.pdf
+	http://www.cs.rhul.ac.uk/home/alexc/papers/thesis.pdf
+
+* Implement the EM algorithm in order to deal with ambiguity (Chapter 5.5 in the second paper). This requires intrusive surgery, so I suggest talking to me before the cutting begins.
+* Implement a method to deal with rare words (Chapter 5.6 in the second paper).
+
