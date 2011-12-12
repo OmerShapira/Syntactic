@@ -9,7 +9,7 @@ http://omershapira.com
 
 VISUALIZATION: http://syntactic.omershapira.com
 
-ACCEPTING CONTRIBUTORS! Read the 'tasks' list and join in. If there are any questions, feel free to contact me at info|at|omershapira|dot|com.
+ACCEPTING CONTRIBUTORS! Read the current tasks in the 'Issues' list and join in. If there are any questions, feel free to contact me at info∞omershapiraºcom.
 
 Description
 -----------
@@ -87,17 +87,9 @@ Structure
       .|__Report.java
       ..
 
-Tasks
+Future plans
 =====
-
-Features and Performance:
--------------------------
- - Add multithreading to the main clustering procedure. Relevant scope: Learner.java
- - Improve the parser and source ingest. Relevant scope: the Corpus and Corpus.source packages.
- - Serialize the data structures so that the program will be interruptible. NOTE: Some of the code needs to be made more generic beforehand, please let me know before beginning.
- - Add a parser for Google's 3-gram database. Because of size constraints, this requires serializing the data structure first.
- - Add rulesets for parsers. Rulesets should be written in regexes, with a rule for SPLIT, and a 2-place rule for REPLACE.
- - Add output processors. Currently the output is JSON and save for its copious space requirements, it works well. That's why I suggest processing the output with scripts instead of with the main code.
+Eventually, this project is planned to output navigable data about language, with data which can be used with NLP applications such as semantic web results, entity extraction, and automatic dictionary builders. We are gradually adding algorithms and testing their stability.
 
 Algorithms:
 -----------
