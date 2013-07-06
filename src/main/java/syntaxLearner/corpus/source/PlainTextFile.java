@@ -40,7 +40,7 @@ public class PlainTextFile extends CorpusSource {
 			try {
 				FileReader fr = new FileReader(source);
 				BufferedReader br = new BufferedReader(fr);
-				sc = new Scanner(br).useDelimiter("[\\.\\,\\;\\!\\?\\\"\\ì\\î]+?"); // removed \\\'
+				sc = new Scanner(br).useDelimiter("[\\.\\,\\;\\!\\?\\\"\\‚Äú\\‚Äù]+?"); // removed \\\'
 				isOpen = true;
 			} catch (FileNotFoundException e) {
 				Console.line("ERROR: File not found at "+source.getAbsolutePath());
